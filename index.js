@@ -95,7 +95,8 @@ wss.on("connection", ws => {
           ws.otherName = name;
           sendTo(answerRecipient, {
             type: "answer",
-            answer
+            answer,
+            name: ws.name
           });
         }
         break;
