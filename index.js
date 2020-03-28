@@ -106,7 +106,8 @@ wss.on("connection", ws => {
         if (!!candidateRecipient) {
           sendTo(candidateRecipient, {
             type: "candidate",
-            candidate
+            candidate,
+            name: ws.name
           });
         }
         break;
